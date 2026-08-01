@@ -16,6 +16,7 @@
 | `clicfg_enable_optimize_config_flutter_chatbot` | `1` | 启用新版 Flutter ChatBot 配置 |
 | `clicfg_chat_voice_trans_newstyle` | `1` | 启用长按输入框说话转文字的 VoiceTrans V2 新界面 |
 | `clicfg_input_translating_open` | `1` | 保持输入文字翻译功能开启 |
+| `clicfg_chat_inputview_custom_menu` | `1` | 启用聊天输入框自定义菜单样式，为小微“指令”入口提供客户端条件 |
 
 ## 配置地址
 
@@ -46,6 +47,7 @@ node scripts/generate-config.mjs
 ## 说明
 
 - 该配置只解除客户端灰度入口，不保证微信服务器为所有账号开放小微服务。
+- “指令”入口仍要求账号获得 `ChatBot_Ask_Xiaowei` 小微资源灰度。
 - 语音转文字的润色按钮由微信识别服务返回，仍可能受账号灰度限制。
 - 微信在 iPad 上会额外关闭 `enableMiniTaskPageChat`，本配置主要用于 iPhone。
 - 未修改 ChatBot 用户名、账号列表以及 WeClaw 相关配置。
