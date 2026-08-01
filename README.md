@@ -22,8 +22,11 @@ https://raw.githubusercontent.com/wwmix/wechat-xiaowei-abtest-config/main/ABTest
 `ABTestConfig.json` 保持 WCCC 使用的格式：文件内容是完整 JSON 的 Base64 编码，
 并非可直接阅读的普通 JSON。
 
+WCCC 保存地址后可能会自动把文件名改为 `ABTestConfig_New.json`，这是正常行为。
+仓库已经同时提供该 AES 加密版本，内容与上面的 Base64 配置一致。
+
 仓库同时提供 `ABTestConfigDesc.json`。WCCC 同步主配置时会自动请求这个配套的
-功能描述文件，因此两个文件需要位于同一目录并保持当前文件名。
+功能描述文件，因此三个文件需要位于同一目录并保持当前文件名。
 
 ## 重新生成
 
