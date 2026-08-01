@@ -1,0 +1,40 @@
+# WeChat Xiaowei ABTest Config
+
+这是一份面向微信 iOS `8.0.76`（构建号 `8.0.76.17`）的 WCCC 配置，在
+[WCABTestConfig v1.0.0](https://github.com/huami1314/WCABTestConfig/releases/tag/v1.0.0)
+公开配置基础上增加小微相关灰度开关。
+
+## 新增配置
+
+| 配置键 | 值 | 用途 |
+| --- | --- | --- |
+| `clicfg_enable_optimize_config` | `1` | 启用小微半屏总入口 |
+| `clicfg_enable_xiaowei_biz` | `1` | 启用文章摘录“问小微” |
+| `clicfg_enable_xiaowei_msg` | `1` | 启用消息气泡“问小微” |
+| `clicfg_enable_optimize_config_flutter_chatbot` | `1` | 启用新版 Flutter ChatBot 配置 |
+
+## 配置地址
+
+```text
+https://raw.githubusercontent.com/wwmix/wechat-xiaowei-abtest-config/main/ABTestConfig.json
+```
+
+`ABTestConfig.json` 保持 WCCC 使用的格式：文件内容是完整 JSON 的 Base64 编码，
+并非可直接阅读的普通 JSON。
+
+## 重新生成
+
+需要 Node.js 18 或更高版本：
+
+```bash
+node scripts/generate-config.mjs
+```
+
+生成脚本固定校验上游文件的 SHA-256，避免上游文件变化时静默生成不同内容。
+
+## 说明
+
+- 该配置只解除客户端灰度入口，不保证微信服务器为所有账号开放小微服务。
+- 微信在 iPad 上会额外关闭 `enableMiniTaskPageChat`，本配置主要用于 iPhone。
+- 未修改 ChatBot 用户名、账号列表以及 WeClaw 相关配置。
+
