@@ -22,6 +22,9 @@ https://raw.githubusercontent.com/wwmix/wechat-xiaowei-abtest-config/main/ABTest
 `ABTestConfig.json` 保持 WCCC 使用的格式：文件内容是完整 JSON 的 Base64 编码，
 并非可直接阅读的普通 JSON。
 
+仓库同时提供 `ABTestConfigDesc.json`。WCCC 同步主配置时会自动请求这个配套的
+功能描述文件，因此两个文件需要位于同一目录并保持当前文件名。
+
 ## 重新生成
 
 需要 Node.js 18 或更高版本：
@@ -30,11 +33,11 @@ https://raw.githubusercontent.com/wwmix/wechat-xiaowei-abtest-config/main/ABTest
 node scripts/generate-config.mjs
 ```
 
-生成脚本固定校验上游文件的 SHA-256，避免上游文件变化时静默生成不同内容。
+生成脚本会同时生成主配置和功能描述文件，并固定校验两个上游文件的 SHA-256，
+避免上游文件变化时静默生成不同内容。
 
 ## 说明
 
 - 该配置只解除客户端灰度入口，不保证微信服务器为所有账号开放小微服务。
 - 微信在 iPad 上会额外关闭 `enableMiniTaskPageChat`，本配置主要用于 iPhone。
 - 未修改 ChatBot 用户名、账号列表以及 WeClaw 相关配置。
-

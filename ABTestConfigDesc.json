@@ -1,0 +1,89 @@
+{
+  "timestamp": 1782670483,
+  "items": [
+    {
+      "key": "clicfg_moments_flutter_user_page",
+      "value": "1",
+      "title": "朋友圈个人页改版（Flutter）",
+      "desc": "新版 Flutter UI：年/月/日 Tab + 朋友圈相册入口\n需同时开启下方按钮"
+    },
+    {
+      "key": "clicfg_moments_jump_to_self_page",
+      "value": "1",
+      "title": "朋友圈个人页改版-入口分流",
+      "desc": "「我」→朋友圈走新版入口"
+    },
+    {
+      "key": "clicfg_multimsg_copy_open_type",
+      "value": "1",
+      "title": "新版多选复制",
+      "desc": "微信新版多选复制（仅 8.0.71+）\n注意：复制后必须用微信自带的粘贴才能发送"
+    },
+    {
+      "key": "clicfg_voip_ignore_ability_enhancement",
+      "value": "1",
+      "title": "1小时内隐藏他的来电",
+      "desc": "对方来电铃声页弹出「🔕 1 小时内隐藏他的来电」按钮（仅 8.0.72+）"
+    },
+    {
+      "key": "clicfg_main_frame_menu_search_entry",
+      "value": "1",
+      "title": "首页右上角搜索",
+      "desc": "当首页顶端搜索框随着滑动消失后 仅支持 71+\n会自动注册一个搜索按钮在加号旁边，无需回到顶部搜索"
+    },
+    {
+      "key": "clicfg_ting_single_audio_auto_play",
+      "value": "1",
+      "title": "连续朗读",
+      "desc": "旧版「从当前听」"
+    },
+    {
+      "key": "clicfg_apns_content_new_setting_ui",
+      "value": "1",
+      "title": "通知显示头像",
+      "desc": "启用通知显示头像的设置 需要开启"
+    },
+    {
+      "key": "clicfg_main_session_aggregation_enable",
+      "value": "1",
+      "title": "双击未读",
+      "desc": "双击微信 Tab 打开未读视图"
+    },
+    {
+      "key": "clicfg_msg_media_group_enabled",
+      "value": "2",
+      "title": "图片堆叠合并",
+      "desc": "无需多言"
+    },
+    {
+      "key": "clicfg_inviter_user_all_member_can_see",
+      "value": "1",
+      "title": "群成员进群方式对所有人可见",
+      "desc": "开启后，非群主、非管理员也能在群成员资料里查看 Ta 是谁\n邀请进群的 / 通过群二维码扫码进群等进群方式"
+    },
+    {
+      "key": "clicfg_enable_optimize_config",
+      "value": "1",
+      "title": "小微半屏总入口",
+      "desc": "启用小微半屏入口的基础配置"
+    },
+    {
+      "key": "clicfg_enable_xiaowei_biz",
+      "value": "1",
+      "title": "文章摘录问小微",
+      "desc": "启用文章摘录场景中的「问小微」入口"
+    },
+    {
+      "key": "clicfg_enable_xiaowei_msg",
+      "value": "1",
+      "title": "消息气泡问小微",
+      "desc": "启用消息气泡场景中的「问小微」入口"
+    },
+    {
+      "key": "clicfg_enable_optimize_config_flutter_chatbot",
+      "value": "1",
+      "title": "新版小微 ChatBot",
+      "desc": "启用新版 Flutter ChatBot 配置"
+    }
+  ]
+}
