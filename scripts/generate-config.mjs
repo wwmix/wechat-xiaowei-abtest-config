@@ -10,14 +10,18 @@ const descriptionSourceUrl =
 const expectedDescriptionSourceSha256 =
   "c9b7a084a270911a3c90df0e3851d2f70da231dc56ab52b1328776e961cf5fc9";
 
-const xiaoweiFlags = {
+const configVersionTimestamp = 1785513600;
+
+const customFlags = {
   clicfg_enable_optimize_config: "1",
   clicfg_enable_xiaowei_biz: "1",
   clicfg_enable_xiaowei_msg: "1",
   clicfg_enable_optimize_config_flutter_chatbot: "1",
+  clicfg_chat_voice_trans_newstyle: "1",
+  clicfg_input_translating_open: "1",
 };
 
-const xiaoweiDescriptions = [
+const customDescriptions = [
   {
     key: "clicfg_enable_optimize_config",
     value: "1",
@@ -41,6 +45,18 @@ const xiaoweiDescriptions = [
     value: "1",
     title: "新版小微 ChatBot",
     desc: "启用新版 Flutter ChatBot 配置",
+  },
+  {
+    key: "clicfg_chat_voice_trans_newstyle",
+    value: "1",
+    title: "长按输入框语音转文字",
+    desc: "启用聊天输入框长按说话转文字的 VoiceTrans V2 新界面（微信 iOS 8.0.76）",
+  },
+  {
+    key: "clicfg_input_translating_open",
+    value: "1",
+    title: "输入文字翻译",
+    desc: "保持聊天输入框的文本翻译功能开启",
   },
 ];
 
@@ -76,7 +92,7 @@ const decoded = Buffer.from(source.toString("ascii").trim(), "base64").toString(
   "utf8",
 );
 const config = JSON.parse(decoded);
-Object.assign(config, xiaoweiFlags);
+Object.assign(config, customFlags);
 
 const outputJson = `${JSON.stringify(config, null, 2)}\n`;
 const output = Buffer.from(outputJson, "utf8").toString("base64");
@@ -84,7 +100,8 @@ const outputPath = new URL("../ABTestConfig.json", import.meta.url);
 await writeFile(outputPath, output, "ascii");
 
 const descriptions = JSON.parse(descriptionSource.toString("utf8"));
-descriptions.items.push(...xiaoweiDescriptions);
+descriptions.timestamp = configVersionTimestamp;
+descriptions.items.push(...customDescriptions);
 const descriptionOutput = `${JSON.stringify(descriptions, null, 2)}\n`;
 const descriptionOutputPath = new URL(
   "../ABTestConfigDesc.json",

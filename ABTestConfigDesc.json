@@ -1,5 +1,5 @@
 {
-  "timestamp": 1782670483,
+  "timestamp": 1785513600,
   "items": [
     {
       "key": "clicfg_moments_flutter_user_page",
@@ -84,6 +84,18 @@
       "value": "1",
       "title": "新版小微 ChatBot",
       "desc": "启用新版 Flutter ChatBot 配置"
+    },
+    {
+      "key": "clicfg_chat_voice_trans_newstyle",
+      "value": "1",
+      "title": "长按输入框语音转文字",
+      "desc": "启用聊天输入框长按说话转文字的 VoiceTrans V2 新界面（微信 iOS 8.0.76）"
+    },
+    {
+      "key": "clicfg_input_translating_open",
+      "value": "1",
+      "title": "输入文字翻译",
+      "desc": "保持聊天输入框的文本翻译功能开启"
     }
   ]
 }
